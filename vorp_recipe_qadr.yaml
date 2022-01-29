@@ -54,19 +54,45 @@ tasks:
     src: https://github.com/VORPCORE/VORP-Inputs
     ref: master
     dest: ./tmp/VORP-Inputs    
+
   - action: move_path
     src: ./tmp/VORP-Inputs/VORP-Inputs[Client-Server]/build/vorp_inputs
     dest: ./resources/[vorp]/vorp_inputs    
+
   - action: download_file
     path: ./tmp/vorp_character_working.zip
     url: https://github.com/VORPCORE/VORP-Character/releases/download/v1.0.0/vorp_character_working.zip
+
   - action: unzip
     dest: ./tmp/vorp_character_working
     src: ./tmp/vorp_character_working.zip    
+
   - action: move_path
     src: ./tmp/vorp_character_working/vorp_character
     dest: ./resources/[vorp]/vorp_character    
 
+  - action: download_file
+    path: ./tmp/vorp_inventory.zip
+    url: https://github.com/VORPCORE/VORP-Inventory/releases/download/v1.0.8-nulls.3/vorp_inventory.zip
+
+  - action: unzip
+    dest: ./tmp/vorp_inventory
+    src: ./tmp/vorp_inventory.zip    
+
+  - action: move_path
+    src: ./tmp/vorp_inventory/vorp_inventory
+    dest: ./resources/[vorp]/vorp_inventory
+    
+  # Prepare Database
+  - action: connect_database
+  - action: query_database
+    file: ./resources/[vorp]/vorp_inventory/database.sql
+
   # Clean up
   - action: remove_path
+    path: ./resources/[sql]/ghmattimysql/config.json
+
+  - action: remove_path
     path: ./tmp
+
+    
