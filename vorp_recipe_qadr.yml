@@ -1,0 +1,73 @@
+$engine: 3
+$onesync: on
+name: Vorpcore
+version: 1.1.0
+author: Abdulkadir Aktaş
+description: Bu tarif Vorpcore için abdulkadir aktaş tarafından hazırlanmıştır.
+
+tasks:
+  #  Download Base Files
+  - action: download_github
+    src: https://github.com/abdulkadiraktas/vorp_txAdminRecipe
+    ref: main
+    dest: ./tmp/vorp_txAdminRecipe
+  
+  - action: move_path
+    src: ./tmp/vorp_txAdminRecipe/server.cfg
+    dest: ./server.cfg
+  
+  - action: move_path
+    src: ./tmp/vorp_txAdminRecipe/vorp.png
+    dest: ./vorp.png
+  
+  # STANDALONE
+  - action: download_github
+    src: https://github.com/citizenfx/cfx-server-data
+    subpath: resources
+    dest: ./resources/[cfx-default]
+    
+    
+  - action: download_github
+    src: https://github.com/Duguayster/ghmattimysql
+    ref: main
+    dest: ./tmp/ghmattimysql
+
+  - action: move_path
+    src: ./tmp/ghmattimysql/ghmattimysql
+    dest: ./resources/[sql]/ghmattimysql
+    
+
+  - action: download_github
+    src: https://github.com/VORPCORE/VORP-Core
+    ref: master
+    dest: ./tmp/VORP-Core
+    
+  - action: move_path
+    src: ./tmp/VORP-Core/build/vorp_core
+    dest: ./resources/[vorp]/vorp_core    
+
+  # Prepare Database
+  - action: connect_database
+  - action: query_database
+    file: ./resources/[vorp]/vorp_core/vorpv2.sql
+        
+  - action: download_github
+    src: https://github.com/VORPCORE/VORP-Inputs
+    ref: master
+    dest: ./tmp/VORP-Inputs    
+  - action: move_path
+    src: ./tmp/VORP-Inputs/VORP-Inputs[Client-Server]/build/vorp_inputs
+    dest: ./resources/[vorp]/vorp_inputs    
+  - action: download_file
+    path: ./tmp/vorp_character_working.zip
+    url: https://github.com/VORPCORE/VORP-Character/releases/download/v1.0.0/vorp_character_working.zip
+  - action: unzip
+    dest: ./tmp/vorp_character_working
+    src: ./tmp/vorp_character_working.zip    
+  - action: move_path
+    src: ./tmp/vorp_character_working/vorp_character
+    dest: ./resources/[vorp]/vorp_character    
+
+  # Clean up
+  - action: remove_path
+    path: ./tmp
