@@ -94,5 +94,3 @@ tasks:
 
   - action: remove_path
     path: ./tmp
-
-    
