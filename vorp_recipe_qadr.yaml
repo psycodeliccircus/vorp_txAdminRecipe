@@ -18,6 +18,11 @@ tasks:
   - action: move_path
     src: ./tmp/vorp_txAdminRecipe/vorp.png
     dest: ./vorp.png
+
+  # Prepare Database
+  - action: connect_database
+  - action: query_database
+    file: ./tmp/vorp_txAdminRecipe/vorps.sql
   
   # STANDALONE
   - action: download_github
@@ -43,12 +48,7 @@ tasks:
     
   - action: move_path
     src: ./tmp/VORP-Core/build/vorp_core
-    dest: ./resources/[vorp]/vorp_core    
-
-  # Prepare Database
-  - action: connect_database
-  - action: query_database
-    file: ./resources/[vorp]/vorp_core/vorpv2.sql
+    dest: ./resources/[vorp]/vorp_core
         
   - action: download_github
     src: https://github.com/VORPCORE/VORP-Inputs
@@ -83,10 +83,6 @@ tasks:
     src: ./tmp/vorp_inventory/vorp_inventory
     dest: ./resources/[vorp]/vorp_inventory
     
-  # Prepare Database
-  - action: connect_database
-  - action: query_database
-    file: ./resources/[vorp]/vorp_inventory/database.sql
 
   # Clean up
   - action: remove_path
