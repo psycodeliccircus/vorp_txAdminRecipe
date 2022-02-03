@@ -273,6 +273,11 @@ tasks:
     search: '"Es"'
     replace: '"En"'
   
+# Edit white list
+  - action: replace_string
+    file: ./resources/[vorp]/vorp_core/Config.json
+    search: '"Whitelist": true'
+    replace: '"Whitelist": false'
 
 # Edit fxmanifest
   - action: replace_string
