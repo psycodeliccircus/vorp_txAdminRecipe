@@ -198,7 +198,7 @@ INSERT INTO `items` (`item`, `label`, `limit`, `can_remove`, `type`, `usable`) V
 ('ammo_shotgun', 'Shotgun Shells', 10, 1, 'item_standard', 1),
 ('ammo_bullet_repeater', 'Repeater Ammo', 10, 1, 'item_standard', 1),
 ('wood', 'Wood', 50, 1, 'item_standard', 0),
-('wooden_boards', 'Wooden Boards', 25, 1, 'item_standard', 0)
+('wooden_boards', 'Wooden Boards', 25, 1, 'item_standard', 0),
 ('ammorepeaterexplosive', 'Repeater Ammo Explosive', 10, 1, 'item_standard', 1),
 ('ammorepeaterexpress', 'Repeater Ammo Express', 10, 1, 'item_standard', 1),
 ('ammorepeaternormal', 'Repeater Ammo Normal', 10, 1, 'item_standard', 1),
@@ -240,53 +240,3 @@ INSERT INTO `items` (`item`, `label`, `limit`, `can_remove`, `type`, `usable`) V
 ('ammovoldynamite', 'Volatile Dynamite Ammo', 10, 1, 'item_standard', 1),
 ('ammomolotov', 'Molotov Ammo', 10, 1, 'item_standard', 1),
 ('ammovolmolotov', 'Volatile Molotov Ammo', 10, 1, 'item_standard', 1);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
