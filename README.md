@@ -1,3 +1,5 @@
+This version is outdated. 
+Use this one https://github.com/VORPCORE/VORP_txAdmin
 # vorp_txAdminRecipe
  Recipe for vorp core 
 
