@@ -72,18 +72,6 @@ tasks:
     src: ./tmp/vorp_character_working/vorp_character
     dest: ./resources/[vorp]/vorp_character
 
-# Vorp Inventory
-  #- action: download_file
-  #  path: ./tmp/vorp_inventory.zip
-  #  url: https://github.com/VORPCORE/VORP-Inventory/releases/download/v1.0.8-nulls.3/vorp_inventory.zip
-
-  #- action: unzip
-  #  dest: ./tmp/vorp_inventory
-  #  src: ./tmp/vorp_inventory.zip
-
-  #- action: move_path
-  #  src: ./tmp/vorp_inventory/vorp_inventory
-  #  dest: ./resources/[vorp]/vorp_inventory
 
   - action: download_github
     src: https://github.com/VORPCORE/VORP-Inventory
@@ -145,16 +133,6 @@ tasks:
   - action: move_path
     src: ./tmp/VORP-Stores/VORP-Stores[Client-Server]/build/vorp_stores/
     dest: ./resources/[vorp]/vorp_stores
-
-# Vorp WeaponStore  This resource not working.
-  #- action: download_github
-  #  src: https://github.com/VORPCORE/VORP-WeaponStore
-  #  ref: master
-  #  dest: ./tmp/VORP-WeaponStore
-
-  #- action: move_path
-  #  src: ./tmp/VORP-WeaponStore/VORP-WeaponStore[Client-Server]/build/vorp_weaponstore/
-  #  dest: ./resources/[vorp]/vorp_weaponstore
 
 # Vorp Banks
   - action: download_github
@@ -218,7 +196,6 @@ tasks:
 
 # Edit Langs to EN
 
-
   - action: remove_path
     path: ./resources/[vorp]/vorp_postman/Config.json
 
@@ -239,13 +216,6 @@ tasks:
   - action: move_path
     src: ./resources/[vorp]/vorp_cinema/Config_En.json
     dest: ./resources/[vorp]/vorp_cinema/Config.json
-
-  #- action: remove_path
-  #  path: ./resources/[vorp]/vorp_weaponstore/Config.json
-
-  #- action: move_path
-  #  src: ./resources/[vorp]/vorp_weaponstore/Config_En.json
-  #  dest: ./resources/[vorp]/vorp_weaponstore/Config.json
 
   - action: remove_path
     path: ./resources/[vorp]/vorp_stables/Config.json
@@ -307,18 +277,6 @@ tasks:
 
   - action: remove_path
     path: ./resources/[vorp]/vorp_clothingstore/CitizenFX.Core.dll
-
-  #- action: remove_path
-  #  path: ./resources/[vorp]/vorp_inventory/syn.lua
-
-  #- action: remove_path
-  #  path: ./resources/[vorp]/vorp_inventory/invstuff.lua
-
-  #- action: remove_path
-  #  path: ./resources/[vorp]/vorp_inventory/nuistuff.lua
-
-  - action: remove_path
-    path: ./resources/[sql]/ghmattimysql/config.json
 
   - action: remove_path
     path: ./tmp
