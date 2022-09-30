@@ -1,8 +1,8 @@
 $engine: 3
 name: Vorpcore
 version: 1.1.0
-author: Abdulkadir Aktaş
-description: Bu tarif Vorpcore için abdulkadir aktaş tarafından hazırlanmıştır.
+author: Renildo Marcio
+description: Esta receita foi preparada para Vorpcore por Renildo Marcio.
 
 tasks:
 #  Download Base Files
