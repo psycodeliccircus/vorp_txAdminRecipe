@@ -308,14 +308,14 @@ tasks:
   - action: remove_path
     path: ./resources/[vorp]/vorp_clothingstore/CitizenFX.Core.dll
 
-  - action: remove_path
-    path: ./resources/[vorp]/vorp_inventory/syn.lua
+  #- action: remove_path
+  #  path: ./resources/[vorp]/vorp_inventory/syn.lua
 
-  - action: remove_path
-    path: ./resources/[vorp]/vorp_inventory/invstuff.lua
+  #- action: remove_path
+  #  path: ./resources/[vorp]/vorp_inventory/invstuff.lua
 
-  - action: remove_path
-    path: ./resources/[vorp]/vorp_inventory/nuistuff.lua
+  #- action: remove_path
+  #  path: ./resources/[vorp]/vorp_inventory/nuistuff.lua
 
   - action: remove_path
     path: ./resources/[sql]/ghmattimysql/config.json
