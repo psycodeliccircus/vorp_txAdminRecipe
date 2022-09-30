@@ -10,11 +10,11 @@ tasks:
     src: https://github.com/abdulkadiraktas/vorp_txAdminRecipe
     ref: main
     dest: ./tmp/vorp_txAdminRecipe
-  
+
   - action: move_path
     src: ./tmp/vorp_txAdminRecipe/server.cfg
     dest: ./server.cfg
-  
+
   - action: move_path
     src: ./tmp/vorp_txAdminRecipe/vorp.png
     dest: ./vorp.png
@@ -23,13 +23,13 @@ tasks:
   - action: connect_database
   - action: query_database
     file: ./tmp/vorp_txAdminRecipe/vorps.sql
-  
+
 # STANDALONE CFX
   - action: download_github
     src: https://github.com/citizenfx/cfx-server-data
     subpath: resources
-    dest: ./resources/[cfx-default]    
-    
+    dest: ./resources/[cfx-default]
+
   - action: download_github
     src: https://github.com/Duguayster/ghmattimysql
     ref: main
@@ -37,27 +37,27 @@ tasks:
 
   - action: move_path
     src: ./tmp/ghmattimysql/ghmattimysql
-    dest: ./resources/[sql]/ghmattimysql    
+    dest: ./resources/[sql]/ghmattimysql
 
 # Vorp Core
   - action: download_github
     src: https://github.com/VORPCORE/VORP-Core
     ref: master
     dest: ./tmp/VORP-Core
-    
+
   - action: move_path
     src: ./tmp/VORP-Core/build/vorp_core
     dest: ./resources/[vorp]/vorp_core
-  
+
 # Vorp Inputs
   - action: download_github
     src: https://github.com/VORPCORE/VORP-Inputs
     ref: master
-    dest: ./tmp/VORP-Inputs    
+    dest: ./tmp/VORP-Inputs
 
   - action: move_path
-    src: ./tmp/VORP-Inputs/VORP-Inputs[Client-Server]/build/vorp_inputs
-    dest: ./resources/[vorp]/vorp_inputs    
+    src: ./tmp/VORP-Inputs/VORP-Inputs/build/vorp_inputs
+    dest: ./resources/[vorp]/vorp_inputs
 
 # Vorp characters
   - action: download_file
@@ -66,11 +66,11 @@ tasks:
 
   - action: unzip
     dest: ./tmp/vorp_character_working
-    src: ./tmp/vorp_character_working.zip    
+    src: ./tmp/vorp_character_working.zip
 
   - action: move_path
     src: ./tmp/vorp_character_working/vorp_character
-    dest: ./resources/[vorp]/vorp_character    
+    dest: ./resources/[vorp]/vorp_character
 
 # Vorp Inventory
   #- action: download_file
@@ -79,33 +79,33 @@ tasks:
 
   #- action: unzip
   #  dest: ./tmp/vorp_inventory
-  #  src: ./tmp/vorp_inventory.zip    
+  #  src: ./tmp/vorp_inventory.zip
 
   #- action: move_path
   #  src: ./tmp/vorp_inventory/vorp_inventory
   #  dest: ./resources/[vorp]/vorp_inventory
-  
+
   - action: download_github
     src: https://github.com/VORPCORE/VORP-Inventory
     ref: master
-    dest: ./tmp/VORP-Inventory 
+    dest: ./tmp/VORP-Inventory
 
   - action: move_path
     src: ./tmp/VORP-Inventory/VORP-Inventory[Client-Server]/Build/vorp_inventory/
-    dest: ./resources/[vorp]/vorp_inventory    
+    dest: ./resources/[vorp]/vorp_inventory
 
-    
-    
+
+
 # Vorp Metabolism
   - action: download_github
     src: https://github.com/VORPCORE/VORP-Metabolism
     ref: master
-    dest: ./tmp/VORP-Metabolism 
+    dest: ./tmp/VORP-Metabolism
 
   - action: move_path
     src: ./tmp/VORP-Metabolism/VORP-Metabolism/build/vorp_metabolism/
-    dest: ./resources/[vorp]/vorp_metabolism    
-    
+    dest: ./resources/[vorp]/vorp_metabolism
+
 # Vorp ClothingStore
   - action: download_github
     src: https://github.com/VORPCORE/VORP-ClothingStore
@@ -115,7 +115,7 @@ tasks:
   - action: move_path
     src: ./tmp/VORP-ClothingStore/VORP-ClothingStore[Server-Client]/build/vorp_clothingstore/
     dest: ./resources/[vorp]/vorp_clothingstore
-    
+
 # Vorp Stables
   - action: download_github
     src: https://github.com/VORPCORE/VORP-Stables
@@ -123,9 +123,9 @@ tasks:
     dest: ./tmp/VORP-Stables
 
   - action: move_path
-    src: ./tmp/VORP-Stables/VORP-Stables[Client-Server]/build/vorp_stables/
+    src: ./tmp/VORP-Stables/VORP-Stables/build/vorp_stables/
     dest: ./resources/[vorp]/vorp_stables
-    
+
 # Vorp AdminMenu
   - action: download_github
     src: https://github.com/VORPCORE/VORP-AdminMenu
@@ -135,7 +135,7 @@ tasks:
   - action: move_path
     src: ./tmp/VORP-AdminMenu/VORP_AdminMenu[Client-Server]/build/vorp_adminmenu/
     dest: ./resources/[vorp]/vorp_adminmenu
-    
+
 # Vorp Stores
   - action: download_github
     src: https://github.com/VORPCORE/VORP-Stores
@@ -145,7 +145,7 @@ tasks:
   - action: move_path
     src: ./tmp/VORP-Stores/VORP-Stores[Client-Server]/build/vorp_stores/
     dest: ./resources/[vorp]/vorp_stores
-    
+
 # Vorp WeaponStore  This resource not working.
   #- action: download_github
   #  src: https://github.com/VORPCORE/VORP-WeaponStore
@@ -155,7 +155,7 @@ tasks:
   #- action: move_path
   #  src: ./tmp/VORP-WeaponStore/VORP-WeaponStore[Client-Server]/build/vorp_weaponstore/
   #  dest: ./resources/[vorp]/vorp_weaponstore
-    
+
 # Vorp Banks
   - action: download_github
     src: https://github.com/VORPCORE/VORP-Banks
@@ -165,7 +165,7 @@ tasks:
   - action: move_path
     src: ./tmp/VORP-Banks/vorp_banks/
     dest: ./resources/[vorp]/vorp_banks
-    
+
 # Vorp BarberShop
   - action: download_github
     src: https://github.com/VORPCORE/VORP-BarberShop
@@ -175,7 +175,7 @@ tasks:
   - action: move_path
     src: ./tmp/VORP-BarberShop/VORP-BarberShops[Client-Server]/build/vorp_barbershops/
     dest: ./resources/[vorp]/vorp_barbershops
-    
+
 # Vorp Cinema
   - action: download_github
     src: https://github.com/VORPCORE/VORP-Cinema
@@ -185,7 +185,7 @@ tasks:
   - action: move_path
     src: ./tmp/VORP-Cinema/VORP-Cinema[Client-Server]/build/vorp_cinema/
     dest: ./resources/[vorp]/vorp_cinema
-    
+
 # Vorp Housing
   - action: download_github
     src: https://github.com/VORPCORE/VORP-Housing
@@ -195,7 +195,7 @@ tasks:
   - action: move_path
     src: ./tmp/VORP-Housing/VORP-Housing[Client-Server]/build/vorp_housing/
     dest: ./resources/[vorp]/vorp_housing
-    
+
 # Vorp PostMan
   - action: download_github
     src: https://github.com/VORPCORE/VORP-PostMan
@@ -205,7 +205,7 @@ tasks:
   - action: move_path
     src: ./tmp/VORP-PostMan/VORP-PostMan[Server-Client]/build/vorp_postman/
     dest: ./resources/[vorp]/vorp_postman
-    
+
 # Vorp WoodCutter
   - action: download_github
     src: https://github.com/VORPCORE/VORP-WoodCutter
@@ -215,38 +215,38 @@ tasks:
   - action: move_path
     src: ./tmp/VORP-WoodCutter/VORP-WoodCutter[Server-Client]/build/vorp_woodcutter/
     dest: ./resources/[vorp]/vorp_woodcutter
-    
+
 # Edit Langs to EN
-  
-  
+
+
   - action: remove_path
     path: ./resources/[vorp]/vorp_postman/Config.json
 
   - action: move_path
     src: ./resources/[vorp]/vorp_postman/Config_En.json
     dest: ./resources/[vorp]/vorp_postman/Config.json
-  
+
   - action: remove_path
     path: ./resources/[vorp]/vorp_housing/Config.json
 
   - action: move_path
     src: ./resources/[vorp]/vorp_housing/Config_En.json
     dest: ./resources/[vorp]/vorp_housing/Config.json
-  
+
   - action: remove_path
     path: ./resources/[vorp]/vorp_cinema/Config.json
 
   - action: move_path
     src: ./resources/[vorp]/vorp_cinema/Config_En.json
     dest: ./resources/[vorp]/vorp_cinema/Config.json
-  
+
   #- action: remove_path
   #  path: ./resources/[vorp]/vorp_weaponstore/Config.json
 
   #- action: move_path
   #  src: ./resources/[vorp]/vorp_weaponstore/Config_En.json
   #  dest: ./resources/[vorp]/vorp_weaponstore/Config.json
-  
+
   - action: remove_path
     path: ./resources/[vorp]/vorp_stables/Config.json
 
@@ -278,12 +278,12 @@ tasks:
     file: ./resources/[vorp]/vorp_core/Config.json
     search: '"Es"'
     replace: '"En"'
-  
+
   - action: replace_string
     file: ./resources/[vorp]/vorp_woodcutter/Config.json
     search: '"Es"'
     replace: '"En"'
-  
+
 # Edit white list
   - action: replace_string
     file: ./resources/[vorp]/vorp_core/Config.json
@@ -295,7 +295,7 @@ tasks:
     file: ./resources/[vorp]/vorp_inventory/fxmanifest.lua
     search: "'nuistuff.lua',"
     replace: ""
-    
+
   - action: replace_string
     file: ./resources/[vorp]/vorp_inventory/fxmanifest.lua
     search: "'invstuff.lua',"
@@ -304,7 +304,7 @@ tasks:
 # Clean up
   - action: remove_path
     path: ./resources/[vorp]/vorp_banks/CitizenFX.Core.dll
-    
+
   - action: remove_path
     path: ./resources/[vorp]/vorp_clothingstore/CitizenFX.Core.dll
 
