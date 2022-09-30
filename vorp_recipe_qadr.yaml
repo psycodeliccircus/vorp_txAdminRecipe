@@ -251,7 +251,7 @@ tasks:
     path: ./resources/[vorp]/vorp_stables/Config.json
 
   - action: move_path
-    src: ./resources/[vorp]/vorp_stables/Config_En.json
+    src: ./resources/[vorp]/vorp_stables/En.json
     dest: ./resources/[vorp]/vorp_stables/Config.json
 
   - action: replace_string
