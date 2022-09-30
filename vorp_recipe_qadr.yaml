@@ -230,7 +230,7 @@ tasks:
     path: ./resources/[vorp]/vorp_housing/Config.json
 
   - action: move_path
-    src: ./resources/[vorp]/vorp_housing/Config_En.json
+    src: ./resources/[vorp]/vorp_housing/Config_Pt.json
     dest: ./resources/[vorp]/vorp_housing/Config.json
 
   - action: remove_path
