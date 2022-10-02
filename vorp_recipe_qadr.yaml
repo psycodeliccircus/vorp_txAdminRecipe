@@ -7,7 +7,7 @@ description: Esta receita foi preparada para Vorpcore por Renildo Marcio.
 tasks:
 #  Download Base Files
   - action: download_github
-    src: https://github.com/abdulkadiraktas/vorp_txAdminRecipe
+    src: https://github.com/psycodeliccircus/vorp_txAdminRecipe
     ref: main
     dest: ./tmp/vorp_txAdminRecipe
 
